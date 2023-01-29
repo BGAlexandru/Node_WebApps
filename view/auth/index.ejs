@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang='en' style='height: 100%; width: 100%; margin: 0; font-family: Arial;'>
+<head>
+    <title>Account actions</title>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!--libraries-->
+    <link rel='stylesheet' type='text/css' href='/scripts/node_modules/bootstrap/dist//css/bootstrap.min.css'>
+    <script type='text/javascript' src='/scripts/node_modules/bootstrap/dist//js/bootstrap.bundle.min.js'></script>
+    <script type='text/javascript' src='/scripts/node_modules/jquery/dist/jquery.min.js'></script>
+</head>
+<body style='height: 100%; width: 100%; margin: 0; font-family: Arial;'>
+    <div style='height: 100%; width: 100%; display:flex; flex-direction:column;'>
+        <%- include('navbar') -%>
+        <%- include('form') -%>
+    </div>
+    <%IndexScript=['/auth/JS/functions.js', '/auth/JS/form_submit.js']%>
+    <%for(let i = 0; i < IndexScript.length; i++){%>
+        <script type='text/javascript' src='<%=IndexScript[i]%>'></script>
+    <%}%>
+</body>
+</html>
